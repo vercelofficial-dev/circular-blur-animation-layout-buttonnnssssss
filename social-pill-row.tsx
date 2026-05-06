@@ -1,0 +1,88 @@
+"use client"
+
+export function SocialPillRow() {
+  // Colors from user spec
+  const OUTER_BG = "#0A0A0A"
+  const OUTER_BORDER = "#222222"
+  const INNER_BG = "#000000"
+  const INNER_BORDER = "#222222"
+
+  const CIRCLE_SIZE = 30
+  const OUTER_BORDER_WIDTH = 1.5
+  const INNER_BORDER_WIDTH = 1.5
+  const OUTER_PAD_Y = 3
+  const OUTER_PAD_X = 3
+
+  const iconClass = "w-6 h-6 object-contain pointer-events-none select-none"
+  const circleClass = "grid place-items-center rounded-full border"
+
+  return (
+    <div className="w-full flex justify-center pt-6">
+      <div
+        className="rounded-full border-2"
+        style={{
+          backgroundColor: OUTER_BG,
+          borderColor: OUTER_BORDER,
+          borderWidth: OUTER_BORDER_WIDTH,
+          padding: `${OUTER_PAD_Y}px ${OUTER_PAD_X}px`,
+        }}
+        aria-label="Social links"
+      >
+        <div className="flex items-center gap-3">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={circleClass}
+            style={{
+              width: CIRCLE_SIZE,
+              height: CIRCLE_SIZE,
+              backgroundColor: INNER_BG,
+              borderColor: INNER_BORDER,
+              borderWidth: INNER_BORDER_WIDTH,
+            }}
+            aria-label="GitHub"
+          >
+            <img src="/icons/github.png" alt="GitHub" className={iconClass} />
+          </a>
+
+          <a
+            href="https://reddit.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={circleClass}
+            style={{
+              width: CIRCLE_SIZE,
+              height: CIRCLE_SIZE,
+              backgroundColor: INNER_BG,
+              borderColor: INNER_BORDER,
+              borderWidth: INNER_BORDER_WIDTH,
+            }}
+            aria-label="Reddit"
+          >
+            <img src="/icons/reddit.png" alt="Reddit" className={iconClass} />
+          </a>
+
+          <a
+            href="https://mail.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={circleClass}
+            style={{
+              width: CIRCLE_SIZE,
+              height: CIRCLE_SIZE,
+              backgroundColor: INNER_BG,
+              borderColor: INNER_BORDER,
+              borderWidth: INNER_BORDER_WIDTH,
+            }}
+            aria-label="Gmail"
+          >
+            <img src="/icons/gmail.png" alt="Gmail" className={iconClass} />
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default SocialPillRow
